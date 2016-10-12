@@ -1,10 +1,11 @@
 require "nori"
 require "savon/soap_fault"
 require "savon/http_error"
+require "mail"
 
 module Savon
   class Response
-    include Mail::Patterns
+    include Mail::Constants
 
     def initialize(http, globals, locals)
       @http    = http
